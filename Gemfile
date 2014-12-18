@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
@@ -40,5 +41,4 @@ gem 'spring',        group: :development
 
 gem 'rack-cors', :require => 'rack/cors'
 gem 'rails_12factor', group: :production
-ruby 2.1.2p95
 
