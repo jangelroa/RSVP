@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150110104139) do
+ActiveRecord::Schema.define(version: 20141216023251) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,27 +32,21 @@ ActiveRecord::Schema.define(version: 20150110104139) do
   end
 
   create_table "events", force: true do |t|
-    t.string   "public_title"
+    t.string   "title"
     t.text     "public_description"
     t.text     "private_description"
-    t.string   "public_date"
-    t.time     "public_time"
-    t.string   "public_location"
-    t.integer  "public_price"
+    t.date     "date"
+    t.time     "time"
+    t.string   "location"
+    t.decimal  "price",               precision: 7, scale: 2
     t.integer  "max_attendances"
-    t.string   "public_picture"
+    t.string   "event_picture_url"
     t.string   "public_code"
     t.string   "private_code"
-    t.boolean  "is_public?"
+    t.boolean  "publico"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "private_title"
-    t.string   "private_date"
-    t.string   "private_time"
-    t.string   "private_location"
-    t.string   "private_picture"
-    t.integer  "private_price"
   end
 
   create_table "users", force: true do |t|
